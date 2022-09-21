@@ -4,6 +4,8 @@
 
 <body>
 	<?php
+	include('db.php');
+
 
 	$pregunta1 = $_POST['PreguntaUno'];
 	$pregunta2 = $_POST['PreguntaDos'];
@@ -22,11 +24,18 @@
 	if ($pregunta3 == "si")
 		$puntos = $puntos + 1;
 
-	if ($puntos >= 3)
-		$mensaje = "En este momento su situación no requiere asistencia sanitaria. Recuerde seguir manteniendo las recomendaciones generales de distanciamiento social, higiene y protección recomendadas.";
-	else
-		$mensaje = "El que presente algun sintoma y que haya estado en contacto con personas que no toman las memdidas de protección, puede<br> ser perjudicial para su salud, le recomendamos visitar un centro de salud.";
+	if ($pregunta4 == "si")
+		$puntos = $puntos + 1;
 
-	echo "Resultado: $puntos <br> $mensaje <br>";
+	if ($puntos >= 3) {
+		$_SESSION['estado'] = 0;
+		$mensaje = "En este momento su situación no requiere asistencia sanitaria. Recuerde seguir manteniendo las recomendaciones generales de distanciamiento social, higiene y protección recomendadas.";
+	} else {
+		$_SESSION['estado'] = 1;
+		$mensaje = "El que presente algun sintoma y que haya estado en contacto con personas que no toman las memdidas de protección, puede<br> ser perjudicial para su salud, le recomendamos visitar un centro de salud.";
+	}
+
+	$_SESSION['mensaje'] = $mensaje;
+	header("location:carnet.php");
 	?>
 </body>
