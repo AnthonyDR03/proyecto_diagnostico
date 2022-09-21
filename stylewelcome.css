@@ -1,0 +1,80 @@
+.btnresponder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.btnresponder input{
+    padding: 12px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border:1px solid black;
+    cursor: pointer;
+    background-color: #C00000;
+    color: white;
+
+    border-color: #C00000;
+    -webkit-transition : font-size 500ms ease-out; 
+    -moz-transition : font-size 500ms ease-out;
+    -o-transition : font-size 500ms ease-out;
+}
+
+.btnresponder input:hover{
+    background-color: white ;
+    color: #C00000;
+    font-size:1.6rem;
+    border-color: #C00000;
+}
+main{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.4rem;
+}
+
+
+.carnet{
+    display: flex;
+    flex-wrap: wrap !important;
+width: 100%;
+}
+@media screen and (max-width:709px) {
+	.carnet{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .inforcarnet{
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+    }
+    .logo-iestp{
+      width: 0 !important;
+      justify-content: center;
+      display: flex;
+    }
+  
+}
+
+.inforcarnet{
+    display: flex;
+    flex-direction: column;
+width: 70%;
+
+  
+  
+}
+.datos-carnet{
+   display: flex;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding: 8px;
+}
+.datos-carnet div{
+    width: 50%;
+}
+.logo-iestp{
+    width: 30%;
+}
+.estado-carnet{
+    text-align:center ;font-size:3rem
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en/es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test diario</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body >
+    <header class="header">
+      <nav class="nav">
+        <ul>
+          <a class="titulo-nav">TRIAJE DIARIO V1.0</a>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="container">
+        <h2
+          style="
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+              'Lucida Sans', Arial, sans-serif;
+          "
+        >
+          Test de preguntas
+        </h2>
+
+        <form action="ejercicio2.php" method="POST" class="form-salud">
+          <h4>
+            1. ¿En los ultimos 14 dias calendario ha presentado sintomas como
+            fiebre o malestar, dolor de garganta, tos?
+          </h4>
+
+          <div class="inputs-radio">
+            <input type="radio" name="PreguntaUno" value="si" /><label for=""
+              >SI</label
+            >
+          </div>
+          <div class="inputs-radio">
+            <input type="radio" name="PreguntaUno" value="no" /><label for=""
+              >NO</label
+            >
+          </div>
+
+          <h4>
+            2. ¿Estornudos o dificultad para respirar, dolor de cabeza,
+            congestion nasal, perdida de olfato y/o gusto, diarrea?
+          </h4>
+
+          <div class="inputs-radio">
+            <input type="radio" name="PreguntaDos" value="si" /><label for=""
+              >SI</label
+            >
+          </div>
+          <div class="inputs-radio">
+            <input type="radio" name="PreguntaDos" value="no" /><label for=""
+              >NO</label
+            >
+          </div>
+
+          <h4>3. ¿Has tenido contacto con un caso confirmado de COVID-19?</h4>
+
+          <div class="inputs-radio">
+            <input type="radio" name="PreguntaTres" value="si" /><label for=""
+              >SI</label
+            >
+          </div>
+          <div class="inputs-radio">
+            <input type="radio" name="PreguntaTres" value="no" /><label for=""
+              >NO</label
+            >
+          </div>
+
+          <h4>4. ¿Cuenta con las 3 dosis contra el COVID?</h4>
+
+          <div class="inputs-radio">
+            <input type="radio" name="PreguntaTres" value="si" /><label for=""
+              >SI</label
+            >
+          </div>
+          <div class="inputs-radio">
+            <input type="radio" name="PreguntaTres" value="no" /><label for=""
+              >NO</label
+            >
+          </div>
+
+          <br />
+        </form>
+        <div class="btnresultado">
+          <div></div>
+          <input type="submit" value="Enviar test de preguntas"  onclick="location.href='carnet.html';" />
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container-footer">
+        <div>©VI Semestre Desing</div>
+        <div class="footer-hover"> <a href=""  >Política de Privacidad</a></div>
+        <div>
+          <nav class="nav-footer">
+            <ul>
+              <li class="footer-hover"><a href="https://www.iestptrujillo.edu.pe/" target="_blank">IESP Trujillo</a> </li>
+              <li class="footer-hover"> <a href="bienvenida.html" >Inicio</a> </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
