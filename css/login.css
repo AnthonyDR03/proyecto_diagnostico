@@ -8,7 +8,7 @@ a{
     text-decoration: none;
 }
 .fondo{
-    background-image: url("img/fondo.jpg"); 
+    background-image: url("../img/fondo.jpg"); 
 
     background-size: cover;
     background-attachment: fixed;
@@ -99,9 +99,11 @@ background-color: transparent;
     border: 1px solid rgba(41, 142, 243, 0.737);
     outline: none;
 }
-.last-main div{
+.last-main form div{
     display: flex;
     align-items: center;
+
+   padding: 5px 0;
 }
 .icon-log{
     width: 40px !important;

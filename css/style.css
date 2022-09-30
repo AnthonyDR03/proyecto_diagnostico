@@ -110,8 +110,8 @@ main {
 
 .container {
   margin: auto;
-
-  max-width: 900px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .form-salud div {
   margin-bottom: 8px;
@@ -156,6 +156,7 @@ main {
   padding-left: 0px;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 0;
 }
 .nav-footer ul li {
   margin: 0 5px;
@@ -177,4 +178,9 @@ main {
 }
 .end-sesion a:hover{
     color: rgb(138, 178, 226)!important;
+}
+.justify{
+  
+  text-align: justify;
+
 }

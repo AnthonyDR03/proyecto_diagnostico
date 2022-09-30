@@ -32,10 +32,20 @@
 		$mensaje = "En este momento su situación no requiere asistencia sanitaria. Recuerde seguir manteniendo las recomendaciones generales de distanciamiento social, higiene y protección recomendadas.";
 	} else {
 		$_SESSION['estado'] = 1;
-		$mensaje = "El que presente algun sintoma y que haya estado en contacto con personas que no toman las memdidas de protección, puede<br> ser perjudicial para su salud, le recomendamos visitar un centro de salud.";
+		$mensaje = "El que presente algun sintoma y que haya estado en contacto con personas que no toman las medidas de protección, puede<br> ser perjudicial para su salud, le recomendamos visitar un centro de salud.";
 	}
-
 	$_SESSION['mensaje'] = $mensaje;
-	header("location:carnet.php");
+	
+	$usuario = $_SESSION['dni'];
+	$fecha = date("Y-m-d G:i:");
+	$consulta = "INSERT INTO resultados (dni, puntos, fecha, estado) values ('$usuario','$puntos','$fecha','E')";
+	if ($conexion->query($consulta) === TRUE) {
+		header("location:carnet.php");
+	  } else {
+		echo "Error al conectarse a la base de datos: " . $consulta . "<br>" . $conexion->error;
+		return;
+	  }
+
 	?>
+
 </body>

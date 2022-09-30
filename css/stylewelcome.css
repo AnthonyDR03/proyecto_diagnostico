@@ -1,80 +1,116 @@
-.btnresponder{
+.btnresponder {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
-.btnresponder input{
+
+.btnresponder input {
     padding: 12px;
     font-size: 1.5rem;
     border-radius: 10px;
-    border:1px solid black;
+    border: 1px solid black;
     cursor: pointer;
     background-color: #C00000;
     color: white;
 
     border-color: #C00000;
-    -webkit-transition : font-size 500ms ease-out; 
-    -moz-transition : font-size 500ms ease-out;
-    -o-transition : font-size 500ms ease-out;
+    -webkit-transition: font-size 500ms ease-out;
+    -moz-transition: font-size 500ms ease-out;
+    -o-transition: font-size 500ms ease-out;
 }
 
-.btnresponder input:hover{
-    background-color: white ;
+.btnresponder input:hover {
+    background-color: white;
     color: #C00000;
-    font-size:1.6rem;
+    font-size: 1.6rem;
     border-color: #C00000;
 }
-main{
+
+main {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1.4rem;
 }
 
 
-.carnet{
+.carnet {
+    margin-top: 45px;
     display: flex;
     flex-wrap: wrap !important;
-width: 100%;
+   max-width: 1000px;
+ 
+    display: flex;
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.677);
+    border-radius: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-@media screen and (max-width:709px) {
-	.carnet{
+
+@media screen and (max-width:767px) {
+    .carnet {
         flex-direction: column;
         align-items: center;
 
+
     }
-    .inforcarnet{
+
+    .inforcarnet {
         display: flex;
         flex-direction: column;
         width: 100% !important;
     }
-    .logo-iestp{
-      width: 0 !important;
-      justify-content: center;
-      display: flex;
+
+}
+@media screen and (max-width:984px) {
+    .inforcarnet {
+        width: 100% !important;
     }
-  
+
 }
 
-.inforcarnet{
+.inforcarnet {
     display: flex;
     flex-direction: column;
-width: 70%;
+    width: 70%;
 
-  
-  
+
+
 }
-.datos-carnet{
-   display: flex;
-  width: 100%;
-  border-bottom: 1px solid gray;
-  padding: 8px;
+
+.datos-carnet {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
 }
-.datos-carnet div{
+
+.datos-carnet div {
     width: 50%;
+    display: flex;
+    align-items: center;
 }
-.logo-iestp{
-    width: 30%;
+.datos-carnet div p{
+    margin-bottom: 0 !important;
 }
-.estado-carnet{
-    text-align:center ;font-size:3rem
+
+.logo-iestp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estado-carnet {
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px 0;
+    width: 100%;
+}
+.estadobtn input{
+    font-size: 2rem;
+}
+
+.center-carnet{
+    display: flex;
+    justify-content: center;
 }

@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include_once('db.php');
 ?>
 <!DOCTYPE html>
 <html lang="en/es">
@@ -11,29 +11,47 @@ include('db.php');
   <title>Inicio</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/stylewelcome.css" />
+  <link rel="stylesheet" type="text/css" href="https://stackoverflow.com/questions/11855535/style.css" />
+
 </head>
 
 <body>
+
   <header class="header">
     <nav class="nav">
       <ul>
         <a class="titulo-nav">TRIAJE DIARIO V1.0</a>
       </ul>
+      <ul class="end-sesion">
+        <a href="salir.php">Cerrar sesión</a>
+      </ul>
     </nav>
   </header>
   <main class="main">
-    <div class="container" style="text-align: center;">
 
-      <p>Bienvenido <b style="color: #c00000;"> <?php echo $_SESSION['nombres'] ?></b> a nuestro triaje diario virtual</p>
-      <p>Se pide contestar a las siguientes preguntas, con honestidad, la cual nos garantize nuestro estado de salud y poder ingresar a la IESTP.</p>
-      <p>[IMAGEN DE PERSONA EN PC LLENANDO EL FORMULARIO-ETC]</p>
-
+    <div class="container">
+      <p style="text-align: center;">Bienvenido <b style="color: #c00000;">
+          <?php echo $_SESSION['apellidos'] . ' ' . $_SESSION['nombres'] ?></b> a nuestro triaje diario virtual
+        .</p>
+       
+      <?php
+      include('tarjeta_carnet.php');
+      ?>
       <br>
-      <br>
-      <div class="btnresponder">
-        <input type="submit" value="Responder test de preguntas" onclick="location.href='formulario.html';" />
+      <div class="prueba">
+        <p> Se pide contestar a las siguientes preguntas, con honestidad, la cual nos garantice nuestro estado de salud para poder ingresar a la IESTP "TRUJILLO"</p>
+        <div class="btnresponder">
+          <input type="submit" value="Responder test de preguntas" onclick="location.href='formulario.html';" />
+        </div>
       </div>
     </div>
+
+
+
+
+
+
+
   </main>
   <footer class="footer">
     <div class="container-footer">
@@ -43,12 +61,13 @@ include('db.php');
         <nav class="nav-footer">
           <ul>
             <li class="footer-hover"><a href="https://www.iestptrujillo.edu.pe/" target="_blank">IESP Trujillo</a> </li>
-            <li class="footer-hover"> <a href="bienvenida.html">Inicio</a> </li>
+            <li class="footer-hover"> <a href="bienvenida.html">Preguntas Frecuentes</a> </li>
           </ul>
         </nav>
       </div>
     </div>
   </footer>
 </body>
+
 
 </html>
